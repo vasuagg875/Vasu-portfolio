@@ -19,7 +19,6 @@ function Hero() {
   
             {/* Roles */}
             <div className="mt-4 flex w-full max-w-[650px] items-center justify-center gap-8 sm:gap-12">
-  
               <p className="text-center text-[9px] font-medium uppercase tracking-[0.14em] opacity-60 sm:text-[10px]">
                 Event Producer
               </p>
@@ -31,130 +30,58 @@ function Hero() {
               <p className="text-center text-[9px] font-medium uppercase tracking-[0.12em] opacity-60 sm:text-[10px]">
                 Creative Coordinator
               </p>
-  
             </div>
   
-            {/* =========================
-                EVENT IMAGE MARQUEE
-                ========================= */}
-  
+            {/* Event Image Marquee */}
             <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 overflow-hidden sm:mt-8">
+              <div className="event-marquee-track">
   
-              <div className="event-marquee-track flex w-max gap-3">
-  
-                {/* First set */}
-                <div className="flex shrink-0 gap-3">
-  
-                  <img
-                    src="/event-1.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-2.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-3.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-4.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-5.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-6.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-7.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-8.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
+                {/* SET 1 */}
+                <div className="event-marquee-set">
+                  <img src="/event-1.jpg" alt="Event" />
+                  <img src="/event-2.jpg" alt="Event" />
+                  <img src="/event-3.jpg" alt="Event" />
+                  <img src="/event-4.jpg" alt="Event" />
+                  <img src="/event-5.jpg" alt="Event" />
+                  <img src="/event-6.jpg" alt="Event" />
+                  <img src="/event-7.jpg" alt="Event" />
+                  <img src="/event-8.jpg" alt="Event" />
+                  <img src="/event-9.jpg" alt="Event" />
+                  <img src="/event-10.jpg" alt="Event" />
                 </div>
   
-                {/* Duplicate set for seamless loop */}
-                <div className="flex shrink-0 gap-3">
+                {/* SET 2 */}
+                <div className="event-marquee-set">
+                  <img src="/event-1.jpg" alt="Event" />
+                  <img src="/event-2.jpg" alt="Event" />
+                  <img src="/event-3.jpg" alt="Event" />
+                  <img src="/event-4.jpg" alt="Event" />
+                  <img src="/event-5.jpg" alt="Event" />
+                  <img src="/event-6.jpg" alt="Event" />
+                  <img src="/event-7.jpg" alt="Event" />
+                  <img src="/event-8.jpg" alt="Event" />
+                  <img src="/event-9.jpg" alt="Event" />
+                  <img src="/event-10.jpg" alt="Event" />
+                </div>
   
-                  <img
-                    src="/event-1.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-2.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-3.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-4.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-5.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-6.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-7.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
-                  <img
-                    src="/event-8.jpg"
-                    alt="Event"
-                    className="h-[100px] w-[155px] shrink-0 rounded-xl object-cover sm:h-[130px] sm:w-[200px]"
-                  />
-  
+                {/* SET 3 */}
+                <div className="event-marquee-set">
+                  <img src="/event-1.jpg" alt="Event" />
+                  <img src="/event-2.jpg" alt="Event" />
+                  <img src="/event-3.jpg" alt="Event" />
+                  <img src="/event-4.jpg" alt="Event" />
+                  <img src="/event-5.jpg" alt="Event" />
+                  <img src="/event-6.jpg" alt="Event" />
+                  <img src="/event-7.jpg" alt="Event" />
+                  <img src="/event-8.jpg" alt="Event" />
+                  <img src="/event-9.jpg" alt="Event" />
+                  <img src="/event-10.jpg" alt="Event" />
                 </div>
   
               </div>
             </div>
   
-            {/* =========================
-                HERO VISUAL AREA
-                ========================= */}
-  
+            {/* Hero Visual Area */}
             <div className="relative mt-4 min-h-0 w-full flex-1 sm:mt-5">
   
               {/* Audience */}
@@ -217,7 +144,7 @@ function Hero() {
                 </p>
               </div>
   
-              {/* Small decorative shapes */}
+              {/* Decorative shapes */}
               <div className="absolute left-[27%] top-[38%] z-10 hidden h-8 w-8 rotate-12 bg-[#C98F7B] lg:block" />
   
               <div className="absolute right-[27%] top-[35%] z-10 hidden h-8 w-8 rounded-full bg-[#E8D59E] lg:block" />
@@ -231,7 +158,7 @@ function Hero() {
                 />
               </div>
   
-              {/* Mobile stats */}
+              {/* Mobile Stats */}
               <div className="absolute bottom-3 left-0 right-0 z-30 flex justify-between gap-2 lg:hidden">
   
                 <div className="bg-[#E8D59E] px-3 py-2">
@@ -257,23 +184,6 @@ function Hero() {
               </div>
   
             </div>
-  
-          </div>
-  
-          {/* Bottom lane */}
-          <div className="mx-[-1rem] flex shrink-0 items-center justify-between bg-[#E8D59E]/45 px-4 py-3 sm:mx-[-2rem] sm:px-8 lg:mx-[-2.5rem] lg:px-10">
-  
-            <p className="text-[8px] font-medium uppercase tracking-[0.16em] text-[#332E2A]/65 sm:text-[10px]">
-              Punjab, India
-            </p>
-  
-            <p className="hidden text-[8px] font-medium uppercase tracking-[0.16em] text-[#332E2A]/70 sm:block sm:text-[10px]">
-              Creating experiences that stay.
-            </p>
-  
-            <p className="text-[8px] font-medium uppercase tracking-[0.16em] text-[#332E2A]/65 sm:text-[10px]">
-              Scroll ↓
-            </p>
   
           </div>
   

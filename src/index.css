@@ -39,9 +39,31 @@ a {
   color: var(--espresso);
 }
 
+/* =========================
+   EVENT IMAGE MARQUEE
+   ========================= */
+
 .event-marquee-track {
-  animation: event-marquee 32s linear infinite;
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  animation: event-marquee 35s linear infinite;
   will-change: transform;
+}
+
+.event-marquee-set {
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.event-marquee-set img {
+  width: 220px;
+  height: 130px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 @keyframes event-marquee {
@@ -50,6 +72,47 @@ a {
   }
 
   to {
-    transform: translateX(calc(-50% - 6px));
+    transform: translateX(-2332px);
   }
 }
+
+/* Mobile */
+@media (max-width: 640px) {
+  .event-marquee-set img {
+    width: 155px;
+    height: 100px;
+  }
+
+  .event-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: event-marquee 35s linear infinite;
+    will-change: transform;
+  }
+  
+  .event-marquee-set {
+    display: flex;
+    flex-shrink: 0;
+    gap: 12px;
+    width: 2318px;
+    padding-right: 12px;
+  }
+  
+  .event-marquee-set img {
+    width: 220px;
+    height: 130px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  @keyframes event-marquee {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-2318px);
+    }
+  }}
