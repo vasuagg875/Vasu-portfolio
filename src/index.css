@@ -38,3 +38,18 @@ a {
   background: var(--butter);
   color: var(--espresso);
 }
+
+.event-marquee-track {
+  animation: event-marquee 32s linear infinite;
+  will-change: transform;
+}
+
+@keyframes event-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 6px));
+  }
+}
