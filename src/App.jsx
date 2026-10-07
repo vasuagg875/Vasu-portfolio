@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Credentials from "./sections/credentials";
 
 import Navbar from "./components/Navbar";
 
@@ -23,6 +24,7 @@ function Home() {
         <Work />
         <Capabilities />
         <Beyond />
+        <Credentials/>
         <Philosophy />
         <Contact />
       </main>

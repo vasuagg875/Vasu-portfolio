@@ -3,7 +3,7 @@ function Beyond() {
       {
         number: "01",
         title: "Pep Talk",
-        detail: "Photography for School Students",
+        detail: "Photography Course for School Students",
       },
       {
         number: "02",
@@ -12,13 +12,13 @@ function Beyond() {
       },
       {
         number: "03",
-        title: "AI & Business Immersion",
+        title: "AI & Business Immersion Programme",
         detail: "Learning & Industry Experience",
       },
       {
         number: "04",
         title: "Inter-University Literature Quiz",
-        detail: "Literature & Cultural Engagement",
+        detail: "Winner of Literature Quiz",
       },
     ];
   
