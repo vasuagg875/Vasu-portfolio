@@ -6,13 +6,17 @@ function Navbar() {
   const links = [
     { name: "About", href: "#about" },
     { name: "Work", href: "#work" },
+    {
+      name: "Resume",
+      href: "/resume/Vasu-Aggarwal-Resume.pdf",
+      external: true,
+    },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
     <nav className="fixed left-1/2 top-4 z-50 w-max -translate-x-1/2 sm:top-5">
       <div className="flex items-center gap-5 rounded-full border border-[#332E2A]/10 bg-white/85 px-5 py-3 shadow-sm backdrop-blur-md sm:gap-7 sm:px-7">
-
         <a
           href="#home"
           className="text-xs font-semibold tracking-[-0.02em] sm:text-sm"
@@ -28,9 +32,12 @@ function Navbar() {
             <a
               key={link.name}
               href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
               className="text-xs opacity-55 transition-opacity hover:opacity-100"
             >
               {link.name}
+              {link.external && " ↗"}
             </a>
           ))}
         </div>
@@ -55,10 +62,13 @@ function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noreferrer" : undefined}
                 onClick={() => setMenuOpen(false)}
                 className="text-sm"
               >
                 {link.name}
+                {link.external && " ↗"}
               </a>
             ))}
           </div>

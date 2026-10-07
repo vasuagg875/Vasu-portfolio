@@ -16,23 +16,25 @@ function Contact() {
   
             <div>
               <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[#E8D59E]">
-                Have an idea?
+                Open to opportunities
               </p>
   
               <h2 className="text-5xl font-medium leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-9xl">
                 LET'S
                 <br />
-                MAKE IT
+                WORK
                 <br />
-                HAPPEN.
+                TOGETHER.
               </h2>
             </div>
   
             <div className="flex flex-col justify-end">
   
               <p className="mb-8 max-w-md text-base leading-7 opacity-60 sm:text-lg">
-                Whether it's an event, artist collaboration, creative project or
-                something completely unexpected — let's talk.
+                I'm currently open to internship and early-career opportunities
+                in event production, artist management, creative coordination and
+                media. If you think I could be a good fit for your team, I'd love
+                to hear from you.
               </p>
   
               <div className="space-y-5 border-t border-[#F7F3EA]/20 pt-6">
@@ -44,7 +46,6 @@ function Contact() {
                   <span>Email</span>
                   <span>↗</span>
                 </a>
-  
   
                 <a
                   href="tel:+919964207000"
@@ -61,7 +62,7 @@ function Contact() {
   
           <div className="mt-20 flex flex-col justify-between gap-4 border-t border-[#F7F3EA]/20 pt-5 text-xs uppercase tracking-[0.15em] opacity-50 sm:flex-row">
             <span>Punjab, India</span>
-            <span>Available for creative collaborations</span>
+            <span>Open to internship opportunities</span>
           </div>
   
         </div>

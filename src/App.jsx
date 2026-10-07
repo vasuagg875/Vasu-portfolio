@@ -8,7 +8,6 @@ import About from "./sections/about";
 import Work from "./sections/work";
 import Capabilities from "./sections/capabilities";
 import Beyond from "./sections/beyond";
-import Philosophy from "./sections/philosophy";
 import Contact from "./sections/contact";
 
 import ProjectPage from "./pages/ProjectPage";
@@ -25,7 +24,6 @@ function Home() {
         <Capabilities />
         <Beyond />
         <Credentials/>
-        <Philosophy />
         <Contact />
       </main>
 
