@@ -2,11 +2,10 @@ function Hero() {
     return (
       <section
         id="home"
-        className="h-screen overflow-hidden bg-[#F7F3EA] px-4 pt-20 sm:px-8 sm:pt-24 lg:px-10"
+        className="h-auto overflow-hidden bg-[#F7F3EA] px-4 pt-20 sm:h-screen sm:px-8 sm:pt-24 lg:px-10"
       >
-        <div className="mx-auto flex h-full max-w-[1500px] flex-col">
-  
-          <div className="relative flex min-h-0 flex-1 flex-col items-center">
+        <div className="mx-auto flex max-w-[1500px] flex-col sm:h-full">
+          <div className="relative flex flex-col items-center">
   
             {/* Intro */}
             <p className="mt-3 text-[9px] uppercase tracking-[0.28em] opacity-40 sm:mt-2 sm:text-[10px]">
@@ -18,25 +17,24 @@ function Hero() {
             </h1>
   
             {/* Roles */}
-            <div className="mt-4 flex w-full max-w-[650px] items-center justify-center gap-8 sm:gap-12">
-              <p className="text-center text-[9px] font-medium uppercase tracking-[0.14em] opacity-60 sm:text-[10px]">
+            <div className="mt-4 flex w-full max-w-[650px] items-center justify-center gap-5 sm:gap-12">
+              <p className="text-center text-[9px] font-medium uppercase tracking-[0.12em] opacity-60 sm:text-[10px] sm:tracking-[0.14em]">
                 Event Producer
               </p>
   
-              <p className="text-center text-[9px] font-medium uppercase tracking-[0.14em] opacity-60 sm:text-[10px]">
+              <p className="text-center text-[9px] font-medium uppercase tracking-[0.12em] opacity-60 sm:text-[10px] sm:tracking-[0.14em]">
                 Artist Manager
               </p>
   
-              <p className="text-center text-[9px] font-medium uppercase tracking-[0.12em] opacity-60 sm:text-[10px]">
+              <p className="text-center text-[9px] font-medium uppercase tracking-[0.1em] opacity-60 sm:text-[10px] sm:tracking-[0.12em]">
                 Creative Coordinator
               </p>
             </div>
   
             {/* Event Image Marquee */}
-            <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 overflow-hidden sm:mt-8">
+            <div className="relative mt-5 w-full max-w-full overflow-hidden sm:mt-8">
               <div className="event-marquee-track">
-  
-                {/* SET 1 */}
+                
                 <div className="event-marquee-set">
                   <img src="/event-1.jpg" alt="Event" />
                   <img src="/event-2.jpg" alt="Event" />
@@ -50,7 +48,6 @@ function Hero() {
                   <img src="/event-10.jpg" alt="Event" />
                 </div>
   
-                {/* SET 2 */}
                 <div className="event-marquee-set">
                   <img src="/event-1.jpg" alt="Event" />
                   <img src="/event-2.jpg" alt="Event" />
@@ -64,7 +61,6 @@ function Hero() {
                   <img src="/event-10.jpg" alt="Event" />
                 </div>
   
-                {/* SET 3 */}
                 <div className="event-marquee-set">
                   <img src="/event-1.jpg" alt="Event" />
                   <img src="/event-2.jpg" alt="Event" />
@@ -81,104 +77,27 @@ function Hero() {
               </div>
             </div>
   
-            {/* Hero Visual Area */}
-            <div className="relative mt-4 min-h-0 w-full flex-1 sm:mt-5">
-  
-              {/* Audience */}
-              <div className="absolute left-[2%] top-[15%] z-10 hidden w-[150px] -rotate-3 bg-[#E8D59E] p-4 lg:block xl:w-[175px]">
-                <p className="text-[8px] uppercase tracking-[0.15em] opacity-45">
-                  Audience
-                </p>
-  
-                <p className="mt-8 text-3xl font-semibold tracking-[-0.06em]">
-                  2,000+
-                </p>
-  
-                <p className="mt-1 text-[8px] uppercase tracking-[0.12em] opacity-45">
-                  Reached
-                </p>
-              </div>
-  
-              {/* Content */}
-              <div className="absolute bottom-[15%] left-[10%] z-10 hidden w-[145px] rotate-3 bg-[#C98F7B] p-4 lg:block xl:w-[170px]">
-                <p className="text-[8px] uppercase tracking-[0.15em] opacity-45">
-                  Content
-                </p>
-  
-                <p className="mt-8 text-3xl font-semibold tracking-[-0.06em]">
-                  400+
-                </p>
-  
-                <p className="mt-1 text-[8px] uppercase tracking-[0.12em] opacity-45">
-                  Reels created
-                </p>
-              </div>
-  
-              {/* Digital Reach */}
-              <div className="absolute right-[2%] top-[13%] z-10 hidden w-[150px] rotate-3 bg-[#A8AD82] p-4 lg:block xl:w-[175px]">
-                <p className="text-[8px] uppercase tracking-[0.15em] opacity-45">
-                  Digital Reach
-                </p>
-  
-                <p className="mt-8 text-3xl font-semibold tracking-[-0.06em]">
-                  1.5M
-                </p>
-  
-                <p className="mt-1 text-[8px] uppercase tracking-[0.12em] opacity-45">
-                  Total reach
-                </p>
-              </div>
-  
-              {/* Sponsorship */}
-              <div className="absolute bottom-[15%] right-[10%] z-10 hidden w-[145px] -rotate-3 bg-[#332E2A] p-4 text-[#F7F3EA] lg:block xl:w-[170px]">
-                <p className="text-[8px] uppercase tracking-[0.15em] opacity-40">
-                  Sponsorship
-                </p>
-  
-                <p className="mt-8 text-3xl font-semibold tracking-[-0.06em]">
-                  ₹6L
-                </p>
-  
-                <p className="mt-1 text-[8px] uppercase tracking-[0.12em] opacity-40">
-                  Raised
-                </p>
-              </div>
-  
-              {/* Decorative shapes */}
-              <div className="absolute left-[27%] top-[38%] z-10 hidden h-8 w-8 rotate-12 bg-[#C98F7B] lg:block" />
-  
-              <div className="absolute right-[27%] top-[35%] z-10 hidden h-8 w-8 rounded-full bg-[#E8D59E] lg:block" />
+            {/* Hero Visual */}
+            <div className="relative mt-2 flex w-full justify-center sm:mt-4 sm:min-h-0 sm:flex-1">
   
               {/* Vasu */}
-              <div className="absolute bottom-0 left-1/2 z-20 h-[70vh] max-h-full -translate-x-1/2">
+              <div className="relative z-20 flex items-end justify-center">
                 <img
                   src="/vasu.jpg"
                   alt="Vasu Aggarwal"
-                  className="relative z-10 h-full w-auto max-w-[75vw] object-contain object-bottom"
+                  className="h-[52vh] w-auto max-w-[90vw] object-contain object-bottom sm:h-[70vh] sm:max-w-[75vw]"
                 />
               </div>
   
               {/* Mobile Stats */}
               <div className="absolute bottom-3 left-0 right-0 z-30 flex justify-between gap-2 lg:hidden">
-  
-                <div className="bg-[#E8D59E] px-3 py-2">
-                  <p className="text-[7px] uppercase tracking-[0.1em] opacity-50">
-                    Audience
-                  </p>
-  
-                  <p className="mt-1 text-sm font-semibold">
-                    2,000+
-                  </p>
+                
+                <div className="rounded-sm bg-[#E8D59E] px-3 py-2 text-[9px] font-medium uppercase tracking-[0.08em]">
+                  Audience 2,000+
                 </div>
   
-                <div className="bg-[#A8AD82] px-3 py-2">
-                  <p className="text-[7px] uppercase tracking-[0.1em] opacity-50">
-                    Reach
-                  </p>
-  
-                  <p className="mt-1 text-sm font-semibold">
-                    1.5M
-                  </p>
+                <div className="rounded-sm bg-[#A8AD82] px-3 py-2 text-[9px] font-medium uppercase tracking-[0.08em]">
+                  Reach 1.5M
                 </div>
   
               </div>
@@ -186,7 +105,6 @@ function Hero() {
             </div>
   
           </div>
-  
         </div>
       </section>
     );

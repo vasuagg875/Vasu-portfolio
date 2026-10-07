@@ -19,6 +19,7 @@ html {
 
 body {
   margin: 0;
+  width: 100%;
   background: var(--ivory);
   color: var(--espresso);
   font-family: Arial, Helvetica, sans-serif;
@@ -42,6 +43,8 @@ a {
 /* =========================
    EVENT IMAGE MARQUEE
    ========================= */
+
+/* marquee */
 
 .event-marquee-track {
   display: flex;
@@ -76,43 +79,32 @@ a {
   }
 }
 
-/* Mobile */
 @media (max-width: 640px) {
-  .event-marquee-set img {
-    width: 155px;
-    height: 100px;
+  .event-marquee-track {
+    gap: 0;
   }
 
-  .event-marquee-track {
-    display: flex;
-    width: max-content;
-    animation: event-marquee 35s linear infinite;
-    will-change: transform;
-  }
-  
   .event-marquee-set {
-    display: flex;
-    flex-shrink: 0;
-    gap: 12px;
-    width: 2318px;
-    padding-right: 12px;
+    gap: 8px;
+    width: 1630px;
+    padding-right: 8px;
   }
-  
+
   .event-marquee-set img {
-    width: 220px;
-    height: 130px;
+    width: 155px;
+    height: 90px;
     flex-shrink: 0;
     object-fit: cover;
-    border-radius: 12px;
-    display: block;
+    border-radius: 10px;
   }
-  
+
   @keyframes event-marquee {
     from {
       transform: translateX(0);
     }
-  
+
     to {
-      transform: translateX(-2318px);
+      transform: translateX(-1630px);
     }
-  }}
+  }
+}

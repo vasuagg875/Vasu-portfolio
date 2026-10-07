@@ -41,17 +41,13 @@ function Credentials() {
   return (
     <section
       id="credentials"
-      className="bg-[#F7F3EA] px-5 py-20 text-[#332E2A] sm:px-8 sm:py-24 lg:px-12"
+      className="bg-[#F7F3EA] px-5 py-10 text-[#332E2A] sm:px-8 sm:py-12 lg:px-12 lg:py-14"
     >
       <div className="mx-auto max-w-[1400px]">
 
         {/* Heading */}
-        <div className="border-t border-[#332E2A]/15 pt-5">
-          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#4D5440]">
-            Credentials
-          </p>
-
-          <div className="mt-6 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+        <div>
+          <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <h2 className="text-4xl font-semibold leading-[0.95] tracking-[-0.06em] sm:text-5xl lg:text-6xl">
               A few things
               <br />
@@ -65,7 +61,7 @@ function Credentials() {
         </div>
 
         {/* Certificate Cards */}
-        <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-7 grid grid-cols-2 gap-2 sm:grid-cols-2 lg:grid-cols-6">
 
           {certificates.map((certificate) => (
             <a
@@ -73,8 +69,7 @@ function Credentials() {
               href={certificate.file}
               target="_blank"
               rel="noreferrer"
-              className="group rounded-xl border border-[#332E2A]/10 bg-[#E8D59E]/20 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#4D5440] hover:text-[#F7F3EA]"
-            >
+              className="group rounded-xl border border-[#332E2A]/10 bg-[#E8D59E]/20 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-[#4D5440] hover:text-[#F7F3EA] sm:p-5"            >
               <div className="flex items-start justify-between gap-3">
                 <span className="text-[8px] uppercase tracking-[0.18em] opacity-40">
                   Certificate
@@ -85,8 +80,7 @@ function Credentials() {
                 </span>
               </div>
 
-              <div className="mt-12">
-                <h3 className="text-xl font-semibold leading-tight tracking-[-0.03em]">
+              <div className="mt-7 sm:mt-10">                <h3 className="text-xl font-semibold leading-tight tracking-[-0.03em]">
                   {certificate.title}
                 </h3>
 
@@ -95,7 +89,7 @@ function Credentials() {
                 </p>
               </div>
 
-              <div className="mt-8 flex items-center justify-between border-t border-[#332E2A]/10 pt-3 group-hover:border-[#F7F3EA]/20">
+              <div className="mt-5 flex items-center justify-between border-t ...\ border-[#332E2A]/10 pt-3 group-hover:border-[#F7F3EA]/20">
                 <span className="text-[9px] uppercase tracking-[0.15em] opacity-40">
                   View
                 </span>

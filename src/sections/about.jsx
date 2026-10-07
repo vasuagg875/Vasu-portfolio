@@ -2,24 +2,9 @@ function About() {
     return (
       <section
         id="about"
-        className="bg-[#4D5440] px-5 py-10 text-[#F7F3EA] sm:px-8 sm:py-12 lg:px-12 lg:py-14"
+        className="bg-[#4D5440] px-5 py-8 text-[#F7F3EA] sm:px-8 sm:py-10 lg:px-12 lg:py-12"
       >
         <div className="mx-auto max-w-[1400px]">
-  
-          {/* Top line */}
-          <div className="mb-8 flex items-center justify-between border-t border-[#F7F3EA]/20 pt-3 sm:mb-10">
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#E8D59E]" />
-  
-              <p className="text-[9px] font-medium uppercase tracking-[0.2em] text-[#F7F3EA]/65 sm:text-[10px]">
-                About
-              </p>
-            </div>
-  
-            <p className="text-[9px] uppercase tracking-[0.2em] text-[#F7F3EA]/40 sm:text-[10px]">
-              01 / 08
-            </p>
-          </div>
   
           {/* Main content */}
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
@@ -55,7 +40,7 @@ function About() {
           </div>
   
           {/* Bottom information */}
-          <div className="mt-10 grid grid-cols-2 border-t border-[#F7F3EA]/20 pt-4 sm:mt-12 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-2 border-t border-[#F7F3EA]/20 pt-4 sm:mt-10 sm:grid-cols-3">
   
             <div>
               <p className="text-lg font-medium tracking-[-0.03em] sm:text-xl">

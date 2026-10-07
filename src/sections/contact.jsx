@@ -2,17 +2,11 @@ function Contact() {
     return (
       <section
         id="contact"
-        className="bg-[#332E2A] px-5 py-20 text-[#F7F3EA] sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+        className="bg-[#332E2A] px-5 py-12 text-[#F7F3EA] sm:px-8 sm:py-16 lg:px-12 lg:py-20"
       >
-        <div className="mx-auto max-w-1400px">
+        <div className="mx-auto max-w-[1400px]">
   
-          <div className="mb-16 border-b border-[#F7F3EA]/20 pb-5 sm:mb-24">
-            <p className="text-xs uppercase tracking-[0.2em] opacity-60 sm:text-sm">
-              07 — Contact
-            </p>
-          </div>
-  
-          <div className="grid gap-14 lg:grid-cols-[1.3fr_0.7fr]">
+          <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr]">
   
             <div>
               <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[#E8D59E]">
@@ -60,7 +54,7 @@ function Contact() {
   
           </div>
   
-          <div className="mt-20 flex flex-col justify-between gap-4 border-t border-[#F7F3EA]/20 pt-5 text-xs uppercase tracking-[0.15em] opacity-50 sm:flex-row">
+          <div className="mt-14 flex flex-col justify-between gap-4 border-t border-[#F7F3EA]/20 pt-5 text-xs uppercase tracking-[0.15em] opacity-50 sm:flex-row">
             <span>Punjab, India</span>
             <span>Open to internship opportunities</span>
           </div>
