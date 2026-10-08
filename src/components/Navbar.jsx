@@ -56,7 +56,7 @@ function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="absolute right-0 top-14 w-48 rounded-2xl border border-[#332E2A]/10 bg-[#F7F3EA] p-5 shadow-lg sm:hidden">
+        <div className="absolute right-0 top-14 w-44 rounded-2xl border border-[#332E2A]/10 bg-[#F7F3EA] p-5 shadow-lg sm:hidden">
           <div className="flex flex-col gap-4">
             {links.map((link) => (
               <a

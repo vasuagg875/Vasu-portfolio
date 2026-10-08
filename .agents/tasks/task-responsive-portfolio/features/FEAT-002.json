@@ -1,0 +1,31 @@
+{
+  "id": "FEAT-002",
+  "type": "fix",
+  "description": "Make the entire website fully responsive across mobile (320px), tablet (768px), and desktop (1024px+). This is independent of FEAT-001 in that it touches different aspects of the same files — FEAT-001 handles structural changes to work section and data, FEAT-002 handles responsive sizing/spacing adjustments across ALL sections. Must be done after FEAT-001 since FEAT-001 restructures work.jsx layout.",
+  "status": "completed",
+  "steps": [
+    "1. In src/sections/hero.jsx: (a) Change section from 'sm:h-screen' to 'sm:min-h-screen' so it can grow with content. (b) Change h1 from 'text-5xl' base to 'text-4xl' for 320px screens, keep sm:text-6xl md:text-7xl lg:text-[5.5rem]. (c) Tighten roles row gap: 'gap-3 sm:gap-5' instead of 'gap-5'. (d) Change Vasu image height from 'h-[52vh]' to 'h-[45vh] sm:h-[55vh] md:h-[65vh] lg:h-[70vh]'. (e) Stat badges: 'px-2 py-1.5 text-[8px] sm:px-3 sm:py-2 sm:text-[9px]' for tighter mobile fit.",
+    "2. In src/sections/about.jsx: Change h2 from 'text-5xl' to 'text-4xl' base for 320px screens. Keep sm:text-6xl md:text-7xl lg:text-[5.8rem].",
+    "3. In src/sections/capabilities.jsx: (a) Change heading from 'text-4xl' to 'text-3xl' base for 320px. Keep sm:text-5xl lg:text-6xl. (b) Change outer skills div from 'grid-cols-2' to 'grid-cols-1 min-[400px]:grid-cols-2' so skills stack single-column on very narrow screens (<400px). This prevents long labels like 'Sponsorship & Business Development' from being cramped.",
+    "4. In src/sections/credentials.jsx: (a) Change grid from 'grid-cols-2 sm:grid-cols-2 lg:grid-cols-6' to 'grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-6' — adds single-column for tiny screens, 3-column intermediate at 768px for tablets. (b) Change heading from 'text-4xl' to 'text-3xl' base. Keep sm:text-5xl lg:text-6xl.",
+    "5. In src/sections/contact.jsx: Change h2 heading from 'text-5xl sm:text-7xl lg:text-9xl' to 'text-4xl sm:text-6xl md:text-7xl lg:text-9xl' for smoother mobile-to-desktop scaling.",
+    "6. In src/pages/ProjectPage.jsx: (a) Change h1 from 'text-5xl sm:text-7xl lg:text-[6.5rem]' to 'text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem]'. (b) Hero image: 'h-[35vh] sm:h-[45vh] md:h-[60vh]' (was 'h-[45vh] sm:h-[60vh]'). (c) Gallery regular images: 'h-[220px] sm:h-[320px] md:h-[430px]' (was 'h-[320px] sm:h-[430px]'). (d) Gallery wide image (index===2): 'h-[250px] sm:h-[400px] md:h-[600px]' (was 'h-[400px] sm:h-[600px]').",
+    "7. In src/components/Navbar.jsx: Change mobile dropdown from 'w-48' to 'w-44' to fit better on 320px screens. Already has hamburger menu — no other changes needed.",
+    "8. In src/sections/beyond.jsx: No changes needed — already responsive. Activity titles flex correctly, detail text hides on mobile (hidden sm:block). Verify only."
+  ],
+  "acceptance_criteria": [
+    "npm run build completes with zero errors",
+    "All sections render without horizontal overflow at 320px viewport width",
+    "Text sizes scale smoothly from mobile to desktop with no jarring jumps",
+    "Hero section grows with content instead of being fixed at viewport height",
+    "Credentials grid shows 1→2→3→6 columns as viewport widens",
+    "Capabilities skills stack single-column below 400px width",
+    "ProjectPage gallery images scale down appropriately on mobile",
+    "Navbar dropdown fits within 320px viewport"
+  ],
+  "verification": [
+    "Run 'npm run build' in the project root and confirm it succeeds with no errors"
+  ],
+  "blocked_reason": null,
+  "findings": "All 8 steps implemented. hero.jsx: section uses sm:min-h-screen, h1 text-4xl base, roles gap-3 sm:gap-5, Vasu image responsive h-[45vh]/sm:55/md:65/lg:70, stat badges smaller on mobile with sm: breakpoint scale-up. about.jsx: h2 text-4xl base. capabilities.jsx: heading text-3xl base, skills grid-cols-1 min-[400px]:grid-cols-2 for narrow screens. credentials.jsx: grid 1→2→3→6 columns, heading text-3xl base. contact.jsx: h2 text-4xl sm:text-6xl md:text-7xl lg:text-9xl. ProjectPage.jsx: h1 text-4xl sm:text-5xl md:text-7xl, hero image h-[35vh] sm:h-[45vh] md:h-[60vh], gallery regular h-[220px] sm:h-[320px] md:h-[430px], gallery wide h-[250px] sm:h-[400px] md:h-[600px]. Navbar: dropdown w-44. beyond.jsx: no changes needed, already responsive. Build succeeds with zero errors."
+}

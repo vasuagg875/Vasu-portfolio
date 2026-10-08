@@ -281,7 +281,7 @@ function ProjectPage() {
                 {project.role}
               </p>
 
-              <h1 className="mt-6 max-w-5xl text-5xl font-semibold leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-[6.5rem]">
+              <h1 className="mt-6 max-w-5xl text-4xl font-semibold leading-[0.9] tracking-[-0.065em] sm:text-5xl md:text-7xl lg:text-[6.5rem]">
                 {project.title}
               </h1>
 
@@ -306,7 +306,7 @@ function ProjectPage() {
             <img
               src={project.images[0]}
               alt={project.title}
-              className="h-[45vh] w-full object-cover sm:h-[60vh]"
+              className="h-[35vh] w-full object-cover sm:h-[45vh] md:h-[60vh]"
             />
           </div>
         )}
@@ -394,8 +394,8 @@ function ProjectPage() {
                     alt={`${project.title} — ${index + 1}`}
                     className={`w-full object-cover transition-transform duration-500 hover:scale-[1.02] ${
                       index === 2
-                        ? "h-[400px] sm:h-[600px]"
-                        : "h-[320px] sm:h-[430px]"
+                        ? "h-[250px] sm:h-[400px] md:h-[600px]"
+                        : "h-[220px] sm:h-[320px] md:h-[430px]"
                     }`}
                   />
                 </div>

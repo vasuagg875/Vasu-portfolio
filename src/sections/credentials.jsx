@@ -48,7 +48,7 @@ function Credentials() {
         {/* Heading */}
         <div>
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-            <h2 className="text-4xl font-semibold leading-[0.95] tracking-[-0.06em] sm:text-5xl lg:text-6xl">
+            <h2 className="text-3xl font-semibold leading-[0.95] tracking-[-0.06em] sm:text-5xl lg:text-6xl">
               A few things
               <br />
               along the way.
@@ -61,7 +61,7 @@ function Credentials() {
         </div>
 
         {/* Certificate Cards */}
-        <div className="mt-7 grid grid-cols-2 gap-2 sm:grid-cols-2 lg:grid-cols-6">
+        <div className="mt-7 grid grid-cols-1 gap-2 min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
 
           {certificates.map((certificate) => (
             <a

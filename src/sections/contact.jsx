@@ -13,7 +13,7 @@ function Contact() {
                 Open to opportunities
               </p>
   
-              <h2 className="text-5xl font-medium leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-9xl">
+              <h2 className="text-4xl font-medium leading-[0.9] tracking-[-0.06em] sm:text-6xl md:text-7xl lg:text-9xl">
                 LET'S
                 <br />
                 WORK

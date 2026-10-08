@@ -22,7 +22,7 @@ function Capabilities() {
   
           {/* Heading */}
           <div>
-            <h2 className="max-w-3xl text-4xl font-semibold leading-[0.92] tracking-[-0.06em] sm:text-5xl lg:text-6xl">
+            <h2 className="max-w-3xl text-3xl font-semibold leading-[0.92] tracking-[-0.06em] sm:text-5xl lg:text-6xl">
               The skills I bring
               <br />
               to every project.
@@ -30,7 +30,7 @@ function Capabilities() {
           </div>
   
           {/* Skills */}
-<div className="mt-7 grid grid-cols-2 gap-2 sm:flex sm:flex-col">
+<div className="mt-7 grid grid-cols-1 gap-2 min-[400px]:grid-cols-2 sm:flex sm:flex-col">
 
 {/* Row 1 */}
 <div className="contents sm:flex sm:w-full sm:gap-2">

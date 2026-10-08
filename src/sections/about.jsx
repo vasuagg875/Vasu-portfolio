@@ -11,7 +11,7 @@ function About() {
   
             {/* Main statement */}
             <div>
-              <h2 className="max-w-5xl text-5xl font-semibold leading-[0.9] tracking-[-0.065em] sm:text-6xl md:text-7xl lg:text-[5.8rem]">
+              <h2 className="max-w-5xl text-4xl font-semibold leading-[0.9] tracking-[-0.065em] sm:text-6xl md:text-7xl lg:text-[5.8rem]">
                 Turning ideas into
                 <br />
                 <span className="text-[#E8D59E]">

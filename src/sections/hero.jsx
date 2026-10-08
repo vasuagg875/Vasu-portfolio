@@ -2,7 +2,7 @@ function Hero() {
     return (
       <section
         id="home"
-        className="h-auto overflow-hidden bg-[#F7F3EA] px-4 pt-20 sm:h-screen sm:px-8 sm:pt-24 lg:px-10"
+        className="h-auto overflow-hidden bg-[#F7F3EA] px-4 pt-20 sm:min-h-screen sm:px-8 sm:pt-24 lg:px-10"
       >
         <div className="mx-auto flex max-w-[1500px] flex-col sm:h-full">
           <div className="relative flex flex-col items-center">
@@ -12,12 +12,12 @@ function Hero() {
               Hello, I'm
             </p>
   
-            <h1 className="mt-2 text-center text-5xl font-semibold leading-none tracking-[-0.065em] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+            <h1 className="mt-2 text-center text-4xl font-semibold leading-none tracking-[-0.065em] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
               Vasu Aggarwal
             </h1>
   
             {/* Roles */}
-            <div className="mt-4 flex w-full max-w-[650px] items-center justify-center gap-5 sm:gap-12">
+            <div className="mt-4 flex w-full max-w-[650px] items-center justify-center gap-3 sm:gap-5">
               <p className="text-center text-[9px] font-medium uppercase tracking-[0.12em] opacity-60 sm:text-[10px] sm:tracking-[0.14em]">
                 Event Producer
               </p>
@@ -85,18 +85,18 @@ function Hero() {
                 <img
                   src="/vasu.jpg"
                   alt="Vasu Aggarwal"
-                  className="h-[52vh] w-auto max-w-[90vw] object-contain object-bottom sm:h-[70vh] sm:max-w-[75vw]"
+                  className="h-[45vh] w-auto max-w-[90vw] object-contain object-bottom sm:h-[55vh] sm:max-w-[75vw] md:h-[65vh] lg:h-[70vh]"
                 />
               </div>
   
               {/* Mobile Stats */}
               <div className="absolute bottom-3 left-0 right-0 z-30 flex justify-between gap-2 lg:hidden">
                 
-                <div className="rounded-sm bg-[#E8D59E] px-3 py-2 text-[9px] font-medium uppercase tracking-[0.08em]">
+                <div className="rounded-sm bg-[#E8D59E] px-2 py-1.5 text-[8px] font-medium uppercase tracking-[0.08em] sm:px-3 sm:py-2 sm:text-[9px]">
                   Audience 2,000+
                 </div>
   
-                <div className="rounded-sm bg-[#A8AD82] px-3 py-2 text-[9px] font-medium uppercase tracking-[0.08em]">
+                <div className="rounded-sm bg-[#A8AD82] px-2 py-1.5 text-[8px] font-medium uppercase tracking-[0.08em] sm:px-3 sm:py-2 sm:text-[9px]">
                   Reach 1.5M
                 </div>
   
