@@ -89,7 +89,7 @@ function Credentials() {
                 </p>
               </div>
 
-              <div className="mt-5 flex items-center justify-between border-t ...\ border-[#332E2A]/10 pt-3 group-hover:border-[#F7F3EA]/20">
+              <div className="mt-5 flex items-center justify-between border-t border-[#332E2A]/10 pt-3 group-hover:border-[#F7F3EA]/20">
                 <span className="text-[9px] uppercase tracking-[0.15em] opacity-40">
                   View
                 </span>

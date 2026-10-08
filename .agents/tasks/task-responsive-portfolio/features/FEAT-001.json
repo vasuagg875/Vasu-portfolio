@@ -1,0 +1,26 @@
+{
+  "id": "FEAT-001",
+  "type": "fix",
+  "description": "Fix the three specific user complaints: (A) work section grid has horizontal padding/margins creating gaps at viewport edges — restructure so grid is edge-to-edge, (B) Instagram account links exist in project data but are not shown on home-page work cards — add them below each card's heading, (C) hero marquee images all have alt='Event' — fix to empty alt for decorative images. Also fix a className typo in credentials.jsx.",
+  "status": "completed",
+  "steps": [
+    "1. In src/sections/work.jsx, restructure the section layout: remove px-5 sm:px-8 lg:px-12 from the <section> element (keep only bg and py classes). Remove the single <div className='mx-auto max-w-1400px'> wrapper. Wrap ONLY the heading block (the flex div with h2 and p) in a new <div className='mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12'>. Leave the project grid as a direct child of <section> with no horizontal padding and no max-width constraint. The grid keeps its existing: mt-10 grid grid-cols-1 border-l border-t border-[#332E2A]/15 sm:grid-cols-2 lg:grid-cols-4.",
+    "2. In src/sections/work.jsx, add an 'instagram' field to each project object in the projects array. Values extracted from ProjectPage.jsx links data: office-of-student-affairs → { handle: 'osa.chitkarau', url: 'https://www.instagram.com/osa.chitkarau/' }, agyaat-films → { handle: 'agyaat.aadarsh', url: 'https://www.instagram.com/agyaat.aadarsh/' }, rangrezz-25 → { handle: 'rangrezz.ntf', url: 'https://www.instagram.com/rangrezz.ntf/' }, c2s2-literayllis → { handle: 'c2s2_literayllis', url: 'https://www.instagram.com/c2s2_literayllis/' }, agyaat-aadarsh → { handle: 'agyaat.aadarsh', url: 'https://www.instagram.com/agyaat.aadarsh/' }. Projects without Instagram (eventure, aiu-north-zone-youth-festival, lit-fair-2) get instagram: null.",
+    "3. In src/sections/work.jsx, in the card JSX, after the <h3> title and the optional subtitle <p>, and BEFORE the role <p className='mt-4 ...'>, insert: {project.instagram && (<a href={project.instagram.url} target='_blank' rel='noreferrer' className='mt-1.5 inline-block text-[10px] tracking-wide opacity-45 transition-opacity hover:opacity-80 group-hover:text-[#E8D59E]'>@{project.instagram.handle}</a>)}. This places the Instagram handle visibly below the heading, styled subtly but noticeable, with butter-colored highlight on card hover.",
+    "4. In src/sections/hero.jsx, change every alt='Event' to alt='' across all three event-marquee-set divs (30 img tags total). These are decorative marquee images and should have empty alt per WCAG.",
+    "5. In src/sections/credentials.jsx, fix the className typo on the bottom div of each certificate card: change 'border-t ...\\ border-[#332E2A]/10' to 'border-t border-[#332E2A]/10' (remove the stray '...\\ ')."
+  ],
+  "acceptance_criteria": [
+    "npm run build completes with zero errors",
+    "The project grid in the work section has no horizontal padding or margin — cards extend to viewport edges on all screen sizes",
+    "Project cards that have Instagram data show '@handle' text below the project title, rendered as a clickable link opening the Instagram profile in a new tab",
+    "Project cards without Instagram data (eventure, aiu-north-zone-youth-festival, lit-fair-2) show no Instagram link",
+    "Hero marquee images have alt='' (empty string), not alt='Event'",
+    "The credentials card border-t renders correctly (no broken className)"
+  ],
+  "verification": [
+    "Run 'npm run build' in the project root and confirm it succeeds with no errors"
+  ],
+  "blocked_reason": null,
+  "findings": "All 5 steps implemented. Build succeeds (dist/ generated with JS+CSS bundles). Work section grid now edge-to-edge (no horizontal padding on section). Instagram handles displayed below card titles for 5 projects (osa.chitkarau, agyaat.aadarsh, rangrezz.ntf, c2s2_literayllis, agyaat.aadarsh). 3 projects (eventure, aiu-north-zone-youth-festival, lit-fair-2) have no Instagram. Hero marquee images changed from alt='Event' to alt=''. Credentials className typo fixed."
+}

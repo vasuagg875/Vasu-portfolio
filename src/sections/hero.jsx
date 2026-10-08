@@ -36,42 +36,42 @@ function Hero() {
               <div className="event-marquee-track">
                 
                 <div className="event-marquee-set">
-                  <img src="/event-1.jpg" alt="Event" />
-                  <img src="/event-2.jpg" alt="Event" />
-                  <img src="/event-3.jpg" alt="Event" />
-                  <img src="/event-4.jpg" alt="Event" />
-                  <img src="/event-5.jpg" alt="Event" />
-                  <img src="/event-6.jpg" alt="Event" />
-                  <img src="/event-7.jpg" alt="Event" />
-                  <img src="/event-8.jpg" alt="Event" />
-                  <img src="/event-9.jpg" alt="Event" />
-                  <img src="/event-10.jpg" alt="Event" />
+                  <img src="/event-1.jpg" alt="" />
+                  <img src="/event-2.jpg" alt="" />
+                  <img src="/event-3.jpg" alt="" />
+                  <img src="/event-4.jpg" alt="" />
+                  <img src="/event-5.jpg" alt="" />
+                  <img src="/event-6.jpg" alt="" />
+                  <img src="/event-7.jpg" alt="" />
+                  <img src="/event-8.jpg" alt="" />
+                  <img src="/event-9.jpg" alt="" />
+                  <img src="/event-10.jpg" alt="" />
                 </div>
   
                 <div className="event-marquee-set">
-                  <img src="/event-1.jpg" alt="Event" />
-                  <img src="/event-2.jpg" alt="Event" />
-                  <img src="/event-3.jpg" alt="Event" />
-                  <img src="/event-4.jpg" alt="Event" />
-                  <img src="/event-5.jpg" alt="Event" />
-                  <img src="/event-6.jpg" alt="Event" />
-                  <img src="/event-7.jpg" alt="Event" />
-                  <img src="/event-8.jpg" alt="Event" />
-                  <img src="/event-9.jpg" alt="Event" />
-                  <img src="/event-10.jpg" alt="Event" />
+                  <img src="/event-1.jpg" alt="" />
+                  <img src="/event-2.jpg" alt="" />
+                  <img src="/event-3.jpg" alt="" />
+                  <img src="/event-4.jpg" alt="" />
+                  <img src="/event-5.jpg" alt="" />
+                  <img src="/event-6.jpg" alt="" />
+                  <img src="/event-7.jpg" alt="" />
+                  <img src="/event-8.jpg" alt="" />
+                  <img src="/event-9.jpg" alt="" />
+                  <img src="/event-10.jpg" alt="" />
                 </div>
   
                 <div className="event-marquee-set">
-                  <img src="/event-1.jpg" alt="Event" />
-                  <img src="/event-2.jpg" alt="Event" />
-                  <img src="/event-3.jpg" alt="Event" />
-                  <img src="/event-4.jpg" alt="Event" />
-                  <img src="/event-5.jpg" alt="Event" />
-                  <img src="/event-6.jpg" alt="Event" />
-                  <img src="/event-7.jpg" alt="Event" />
-                  <img src="/event-8.jpg" alt="Event" />
-                  <img src="/event-9.jpg" alt="Event" />
-                  <img src="/event-10.jpg" alt="Event" />
+                  <img src="/event-1.jpg" alt="" />
+                  <img src="/event-2.jpg" alt="" />
+                  <img src="/event-3.jpg" alt="" />
+                  <img src="/event-4.jpg" alt="" />
+                  <img src="/event-5.jpg" alt="" />
+                  <img src="/event-6.jpg" alt="" />
+                  <img src="/event-7.jpg" alt="" />
+                  <img src="/event-8.jpg" alt="" />
+                  <img src="/event-9.jpg" alt="" />
+                  <img src="/event-10.jpg" alt="" />
                 </div>
   
               </div>
