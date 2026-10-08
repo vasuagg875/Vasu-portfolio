@@ -16,12 +16,16 @@ const projects = {
     contribution:
       "As an Event Management Trainee, I work across planning, creative development, logistics and on-ground execution. My role also includes designing event graphics, creating post-event newsletters, managing props and coordinating the many moving parts that bring each experience together.",
 
-    links: [
-      {
-        label: "Visit Office of Student Affairs",
-        url: "https://www.chitkara.edu.in/osa",
-      },
-    ],
+      links: [
+        {
+          label: "Visit Office of Student Affairs",
+          url: "https://www.chitkara.edu.in/osa",
+        },
+        {
+          label: "@osa.chitkarau",
+          url: "https://www.instagram.com/osa.chitkarau/",
+        },
+      ],
 
     images: [
       "/projects/office-of-student-affairs/hero.jpg",
@@ -258,8 +262,8 @@ function ProjectPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#F7F3EA] text-[#332E2A]">
-      <div className="mx-auto max-w-[1400px] px-5 py-8 sm:px-8 lg:px-12">
+        <main className="bg-[#F7F3EA] text-[#332E2A]">
+          <div className="mx-auto max-w-[1400px] px-5 py-8 sm:px-8 lg:px-12">
 
         {/* Back */}
         <button
@@ -343,7 +347,7 @@ function ProjectPage() {
 
         {/* External links */}
         {project.links?.length > 0 && (
-          <section className="mt-8 border-t border-[#332E2A]/15 pt-5">
+            <section className="mt-6 border-t border-[#332E2A]/15 pt-4 pb-1">
             <div className="flex flex-wrap items-center gap-3">
               <p className="mr-2 text-[9px] font-medium uppercase tracking-[0.2em] opacity-40">
                 Explore
@@ -366,9 +370,9 @@ function ProjectPage() {
 
         {/* Photo gallery */}
         {project.images.length > 1 && (
-          <section className="mt-20 sm:mt-28">
-            <div className="mb-6 flex items-center justify-between border-t border-[#332E2A]/15 pt-5">
-              <p className="text-[9px] font-medium uppercase tracking-[0.2em] opacity-45">
+            <section className="mt-4 sm:mt-6">
+            <div className="mb-2 flex items-center justify-between border-t border-[#332E2A]/15 pt-2">            
+            <p className="text-[9px] font-medium uppercase tracking-[0.2em] opacity-45">
                 Selected moments
               </p>
 
