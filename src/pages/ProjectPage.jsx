@@ -290,6 +290,27 @@ function ProjectPage() {
                   {project.subtitle}
                 </p>
               )}
+
+              {/* Explore — all links right under subtitle */}
+              {project.links?.length > 0 && (
+                <div className="mt-3 flex flex-wrap items-center gap-3">
+                  <p className="mr-2 text-[9px] font-medium uppercase tracking-[0.2em] opacity-40">
+                    Explore
+                  </p>
+
+                  {project.links.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full border border-[#332E2A]/15 px-4 py-2 text-xs transition-all duration-300 hover:border-[#4D5440] hover:bg-[#4D5440] hover:text-[#F7F3EA]"
+                    >
+                      {link.label} ↗
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
 
             {project.date && (
@@ -341,29 +362,6 @@ function ProjectPage() {
               <p className="max-w-3xl text-lg leading-8 text-[#F7F3EA]/80 sm:text-xl sm:leading-9">
                 {project.contribution}
               </p>
-            </div>
-          </section>
-        )}
-
-        {/* External links */}
-        {project.links?.length > 0 && (
-            <section className="mt-6 border-t border-[#332E2A]/15 pt-4 pb-1">
-            <div className="flex flex-wrap items-center gap-3">
-              <p className="mr-2 text-[9px] font-medium uppercase tracking-[0.2em] opacity-40">
-                Explore
-              </p>
-
-              {project.links.map((link) => (
-                <a
-                  key={link.url}
-                  href={link.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full border border-[#332E2A]/15 px-4 py-2 text-xs transition-all duration-300 hover:border-[#4D5440] hover:bg-[#4D5440] hover:text-[#F7F3EA]"
-                >
-                  {link.label} ↗
-                </a>
-              ))}
             </div>
           </section>
         )}

@@ -126,17 +126,6 @@ function Work() {
                 </p>
               )}
 
-              {project.instagram && (
-                <a
-                  href={project.instagram.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-1.5 inline-block text-[10px] tracking-wide opacity-45 transition-opacity hover:opacity-80 group-hover:text-[#E8D59E]"
-                >
-                  @{project.instagram.handle}
-                </a>
-              )}
-
               <p className="mt-4 text-[8px] font-medium uppercase tracking-[0.15em] opacity-45">
                 {project.role}
               </p>
