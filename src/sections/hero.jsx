@@ -99,7 +99,7 @@ function Hero() {
                 </div>
   
                 {/* Mobile Stats */}
-                <div className="absolute bottom-3 left-0 right-0 z-30 flex justify-between gap-2 lg:hidden">
+                <div className="absolute bottom-3 left-0 right-0 z-30 hidden justify-between gap-2 lg:hidden">
                   
                   <div className="rounded-sm bg-[#E8D59E] px-2 py-1.5 text-[8px] font-medium uppercase tracking-[0.08em] sm:px-3 sm:py-2 sm:text-[9px]">
                     Audience 2,000+
