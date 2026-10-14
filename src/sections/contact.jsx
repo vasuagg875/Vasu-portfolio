@@ -25,7 +25,7 @@ function Contact() {
             <div className="flex flex-col justify-end">
   
               <p className="mb-8 max-w-md text-base leading-7 opacity-60 sm:text-lg">
-                I'm currently open to internship and early-career opportunities
+                I'm currently open to full-time, internship and early-career opportunities
                 in event production, artist management, creative coordination and
                 media. If you think I could be a good fit for your team, I'd love
                 to hear from you.
@@ -42,6 +42,24 @@ function Contact() {
                 </a>
   
                 <a
+                  href="https://www.linkedin.com/in/vasuaggarwal"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between border-b border-[#F7F3EA]/20 pb-5 text-lg transition-opacity hover:opacity-50 sm:text-xl"
+                >
+                  <span>LinkedIn</span>
+                  <span>↗</span>
+                </a>
+                <a
+                  href="https://wa.me/919964207000"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between border-b border-[#F7F3EA]/20 pb-5 text-lg transition-opacity hover:opacity-50 sm:text-xl"
+                >
+                  <span>WhatsApp</span>
+                  <span>↗</span>
+                </a>
+                <a
                   href="tel:+919964207000"
                   className="flex items-center justify-between border-b border-[#F7F3EA]/20 pb-5 text-lg transition-opacity hover:opacity-50 sm:text-xl"
                 >
@@ -56,7 +74,7 @@ function Contact() {
   
           <div className="mt-14 flex flex-col justify-between gap-4 border-t border-[#F7F3EA]/20 pt-5 text-xs uppercase tracking-[0.15em] opacity-50 sm:flex-row">
             <span>Punjab, India</span>
-            <span>Open to internship opportunities</span>
+            <span>Open to full-time &amp; internship roles</span>
           </div>
   
         </div>

@@ -102,6 +102,20 @@ const projects = {
     contribution:
       "As Founder and Head, I lead the club across productions ranging from theatrical shows and corporate activations to competitions and university events. My work spans pre-event planning, promotions, volunteer coordination, technical production, logistics and on-ground execution.",
 
+    highlights: [
+      {
+        label: "Brand Activation",
+        title: "Apple Store Launch",
+        partner: "With Radius Elevate · 3-day activation",
+        text: "Our team handled the complete event promotions, along with discipline, F&B coordination and on-ground logistics across all three days of the launch.",
+      },
+      {
+        label: "Theatrical Production",
+        title: "Out of Frame",
+        partner: "With Rudrakyra Productions · 600+ audience",
+        text: "A theatrical production staged for an audience of 600+. My focus was backstage prop handling, promotions and discipline.",
+      },
+    ],
     images: [
       "/projects/eventure/hero.jpg",
       "/projects/eventure/event-1.jpg",
@@ -366,6 +380,30 @@ function ProjectPage() {
           </section>
         )}
 
+        {/* Highlights */}
+        {project.highlights?.length > 0 && (
+          <section className="mt-4 grid gap-4 sm:mt-6 sm:grid-cols-2">
+            {project.highlights.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-[#332E2A]/15 p-7 sm:p-10"
+              >
+                <p className="text-[9px] font-medium uppercase tracking-[0.2em] opacity-45">
+                  {item.label}
+                </p>
+                <h3 className="mt-6 text-3xl font-semibold leading-[0.95] tracking-[-0.05em] sm:text-4xl">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.15em] text-[#4D5440]">
+                  {item.partner}
+                </p>
+                <p className="mt-5 text-base leading-7 text-[#332E2A]/75 sm:text-lg sm:leading-8">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </section>
+        )}
         {/* Photo gallery */}
         {project.images.length > 1 && (
             <section className="mt-4 sm:mt-6">

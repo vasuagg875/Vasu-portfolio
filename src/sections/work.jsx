@@ -96,8 +96,7 @@ function Work() {
         {projects.map((project) => (
           <div
             key={project.number}
-            className="group relative flex min-h-190px flex-col justify-between border-b border-r border-[#332E2A]/15 p-5 transition-colors duration-300 hover:bg-[#4D5440] hover:text-[#F7F3EA] sm:min-h-210px sm:p-6"
-          >
+            className="group relative flex min-h-[145px] flex-col justify-between border-b border-r border-[#332E2A]/15 p-5 transition-colors duration-300 hover:bg-[#4D5440] hover:text-[#F7F3EA] sm:min-h-[145px] sm:p-5"          >
 
             {/* Number + Arrow */}
             <div className="flex items-start justify-between">
@@ -116,9 +115,9 @@ function Work() {
 
             {/* Project */}
             <div>
-              <h3 className="max-w-240px text-2xl font-medium leading-[0.95] tracking-[-0.045em] sm:text-[1.7rem]">
-                {project.title}
-              </h3>
+            <h3 className="text-xl font-medium leading-[0.95] tracking-[-0.045em] sm:text-[1.5rem]">
+  {project.title}
+</h3>
 
               {project.subtitle && (
                 <p className="mt-1 text-sm opacity-45">
