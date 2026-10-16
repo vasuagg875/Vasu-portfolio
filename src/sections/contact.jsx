@@ -42,7 +42,7 @@ function Contact() {
                 </a>
   
                 <a
-                  href="https://www.linkedin.com/in/vasuaggarwal"
+                  href="https://www.linkedin.com/in/vasuaggarwal875"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between border-b border-[#F7F3EA]/20 pb-5 text-lg transition-opacity hover:opacity-50 sm:text-xl"
