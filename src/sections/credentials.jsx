@@ -6,6 +6,12 @@ const certificates = [
     file: "/certificates/lit-fair.pdf",
   },
   {
+    title: "AIU Certificate of Appreciation",
+    subtitle: "39th Inter-University North Zone Youth Festival",
+    year: "2026",
+    file: "/certificates/aiu.pdf",
+  },
+  {
     title: "Rangrezz '25",
     subtitle: "Media Coordinator",
     year: "2025",
