@@ -36,8 +36,8 @@ function Work() {
     },
     {
       number: "05",
-      title: "AIU North Zone Youth Festival",
-      subtitle: "",
+      title: "Chitutsav",
+      subtitle: "Association of Indian Universities North Zone Youth Festival",
       role: "Media Lead",
       slug: "aiu-north-zone-youth-festival",
       instagram: null,
