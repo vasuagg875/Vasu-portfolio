@@ -54,7 +54,7 @@ function About() {
   
             <div>
               <p className="text-lg font-medium tracking-[-0.03em] sm:text-xl">
-                CS + AI
+                CSE + AI
               </p>
   
               <p className="mt-1 text-[8px] uppercase tracking-[0.16em] text-[#F7F3EA]/40 sm:text-[9px]">
