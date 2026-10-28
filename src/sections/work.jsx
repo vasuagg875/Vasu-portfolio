@@ -20,7 +20,7 @@ function Work() {
     },
     {
       number: "03",
-      title: "Rangrezz '25",
+      title: "Rangrezz'25 - National Theatre Festival",
       subtitle: "",
       role: "Media Coordinator",
       slug: "rangrezz-25",
@@ -28,7 +28,7 @@ function Work() {
     },
     {
       number: "04",
-      title: "Eventure",
+      title: "Eventure - Event Management Society",
       subtitle: "",
       role: "Club Head",
       slug: "eventure",
@@ -44,7 +44,7 @@ function Work() {
     },
     {
       number: "06",
-      title: "Lit Fair 2.0",
+      title: "Lit Fair 2.0 - Literature Festival",
       subtitle: "",
       role: "Fest Head",
       slug: "lit-fair-2",
