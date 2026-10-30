@@ -6,7 +6,7 @@ const certificates = [
     file: "/certificates/lit-fair.pdf",
   },
   {
-    title: "AIU Certificate of Appreciation",
+    title: "AIU North Zone Youth Festival",
     subtitle: "39th Inter-University North Zone Youth Festival",
     year: "2026",
     file: "/certificates/aiu.pdf",
@@ -24,7 +24,7 @@ const certificates = [
     file: "/certificates/sahityam-2026.pdf",
   },
   {
-    title: "AI & Business Immersion",
+    title: "AI & Business Immersion Programme",
     subtitle: "Middlesex University Dubai",
     year: "2025",
     file: "/certificates/ai-business-immersion.pdf",
