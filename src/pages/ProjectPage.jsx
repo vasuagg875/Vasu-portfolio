@@ -6,7 +6,7 @@ const projects = {
     title: "Office of Student Affairs",
     subtitle: "Chitkara University",
     role: "Event Management Trainee",
-    date: "07 August 2026 — 3 Month Internship",
+    date: "07 August 2026 — 06 November 2026",
 
     aboutTitle: "Inside OSA",
 
@@ -14,7 +14,7 @@ const projects = {
       "The Office of Student Affairs drives a wide range of cultural, student and institutional experiences at Chitkara University, from major celebrations and fests to convocations, performances and NSS initiatives.",
 
     contribution:
-      "As an Event Management Trainee, I work across planning, creative development, logistics and on-ground execution. My role also includes designing event graphics, creating post-event newsletters, managing props and coordinating the many moving parts that bring each experience together.",
+      "As an Event Management Trainee, I worked across event planning, creative development, logistics and on-ground execution. I also designed event graphics, created post-event newsletters, managed props and coordinated the many moving parts behind each experience.",
 
       links: [
         {
