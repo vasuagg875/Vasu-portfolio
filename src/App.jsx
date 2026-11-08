@@ -9,7 +9,7 @@ import Work from "./sections/work";
 import Capabilities from "./sections/capabilities";
 import Beyond from "./sections/beyond";
 import Contact from "./sections/contact";
-
+import Testimonials from "./sections/testimonials";
 import ProjectPage from "./pages/ProjectPage";
 
 function Home() {
@@ -23,7 +23,8 @@ function Home() {
         <Work />
         <Capabilities />
         <Beyond />
-        <Credentials/>
+        <Credentials />
+        <Testimonials />
         <Contact />
       </main>
 
