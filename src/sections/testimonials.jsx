@@ -36,6 +36,19 @@ function Testimonials() {
     };
   }, []);
 
+  useEffect(() => {
+    if (window.location.hash === "#share-experience") {
+      setTimeout(() => {
+        document
+          .getElementById("share-experience")
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+      }, 500);
+    }
+  }, []);
+
   return (
     <section
       id="testimonials"
