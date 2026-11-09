@@ -6,9 +6,9 @@ const TESTIMONIALS_API =
 
 function Testimonials() {
   const [recommendations, setRecommendations] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState(false);
+const [activeTestimonial, setActiveTestimonial] = useState(null);
   useEffect(() => {
     const callbackName =
       "testimonialCallback_" + Date.now();
@@ -141,18 +141,17 @@ function Testimonials() {
           )}
 
           {recommendations.length > 0 && (
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {recommendations.map((item, index) => (
-                <div
-                  key={`${item.name}-${index}`}
-                  className="flex flex-col rounded-xl border border-white/10 bg-[#F7F3EA] p-5 text-[#332E2A] transition-transform duration-300 hover:-translate-y-1 sm:p-6"
-                >
+            <div className="mt-7 flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">              {recommendations.map((item, index) => (
+                <button
+                key={`${item.name}-${index}`}
+                type="button"
+                onClick={() => setActiveTestimonial(index)}
+                className="flex w-[280px] min-w-[280px] shrink-0 snap-start flex-col rounded-xl border border-white/10 bg-[#F7F3EA] p-5 text-left text-[#332E2A] transition-transform duration-300 hover:-translate-y-1 sm:w-[320px] sm:min-w-[320px] sm:p-6"              >
                   <span className="text-4xl leading-none text-[#C98F7B]">
                     “
                   </span>
 
-                  <p className="mt-3 flex-1 whitespace-pre-line text-sm leading-6 text-[#332E2A]/75">
-                    {item.testimonial}
+                  <p className="mt-3 line-clamp-3 flex-1 whitespace-pre-line text-sm leading-6 text-[#332E2A]/75">                    {item.testimonial}
                   </p>
 
                   <div className="mt-7 border-t border-[#332E2A]/10 pt-4">
@@ -166,7 +165,7 @@ function Testimonials() {
                         .join(" · ")}
                     </p>
                   </div>
-                </div>
+                </button>
               ))}
             </div>
           )}
@@ -185,8 +184,86 @@ function Testimonials() {
           <span aria-hidden="true">↗</span>
         </a>
 
+        </div>
+
+{activeTestimonial !== null && recommendations[activeTestimonial] && (
+  <div
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-5 backdrop-blur-sm"
+    onClick={() => setActiveTestimonial(null)}
+  >
+    <div
+      className="relative w-full max-w-2xl rounded-2xl bg-[#F7F3EA] p-7 text-[#332E2A] shadow-2xl sm:p-10"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        type="button"
+        onClick={() => setActiveTestimonial(null)}
+        className="absolute right-5 top-5 text-2xl text-[#332E2A]/50 hover:text-[#332E2A]"
+        aria-label="Close testimonial"
+      >
+        ×
+      </button>
+
+      <span className="text-5xl leading-none text-[#C98F7B]">
+        “
+      </span>
+
+      <p className="mt-5 max-h-[45vh] overflow-y-auto whitespace-pre-line text-base leading-8 text-[#332E2A]/80">
+        {recommendations[activeTestimonial].testimonial}
+      </p>
+
+      <div className="mt-8 border-t border-[#332E2A]/10 pt-5">
+        <p className="text-sm font-semibold">
+          {recommendations[activeTestimonial].name}
+        </p>
+
+        <p className="mt-1 text-xs text-[#332E2A]/50">
+          {[
+            recommendations[activeTestimonial].role,
+            recommendations[activeTestimonial].organisation,
+          ].filter(Boolean).join(" · ")}
+        </p>
       </div>
-    </section>
+
+      <div className="mt-7 flex items-center justify-between">
+        <span className="text-xs text-[#332E2A]/50">
+          {activeTestimonial + 1} / {recommendations.length}
+        </span>
+
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={() =>
+              setActiveTestimonial(
+                (activeTestimonial - 1 + recommendations.length) %
+                recommendations.length
+              )
+            }
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#332E2A]/20 text-lg transition hover:bg-[#332E2A] hover:text-white"
+            aria-label="Previous testimonial"
+          >
+            ←
+          </button>
+
+          <button
+            type="button"
+            onClick={() =>
+              setActiveTestimonial(
+                (activeTestimonial + 1) % recommendations.length
+              )
+            }
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#332E2A]/20 text-lg transition hover:bg-[#332E2A] hover:text-white"
+            aria-label="Next testimonial"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+</section>
   );
 }
 

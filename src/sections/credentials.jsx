@@ -1,3 +1,4 @@
+import { useState } from "react";
 const certificates = [
   {
     title: "Lit Fair 2.0",
@@ -44,6 +45,8 @@ const certificates = [
 ];
 
 function Credentials() {
+  const [activeCertificate, setActiveCertificate] = useState(null);
+
   return (
     <section
       id="credentials"
@@ -67,16 +70,16 @@ function Credentials() {
         </div>
 
         {/* Certificate Cards */}
-        <div className="mt-7 grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-6">
-
+        <div className="mt-7 flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory">
           {certificates.map((certificate) => (
-            <a
-              key={certificate.title}
-              href={certificate.file}
-              target="_blank"
-              rel="noreferrer"
-              className="group aspect-square rounded-xl border border-[#332E2A]/10 bg-[#E8D59E]/20 p-3 transition-all duration-300 hover:-translate-y-1 hover:bg-[#4D5440] hover:text-[#F7F3EA] sm:aspect-auto sm:p-5"            >
-              <div className="flex items-start justify-between gap-2">
+            <button
+            key={certificate.title}
+            type="button"
+            onClick={() => setActiveCertificate(certificates.indexOf(certificate))}
+            aria-label={`View ${certificate.title} certificate`}
+            className="group w-[220px] min-w-[220px] shrink-0 aspect-square snap-start rounded-xl border border-[#332E2A]/10 bg-[#E8D59E]/20 p-3 text-left transition-all duration-300 hover:-translate-y-1 hover:bg-[#4D5440] hover:text-[#F7F3EA] sm:aspect-auto sm:w-[250px] sm:min-w-[250px] sm:p-5"
+          >
+            <div className="flex items-start justify-between gap-2">
                 <span className="text-[7px] uppercase tracking-[0.18em] opacity-40 sm:text-[8px]">
                   Certificate
                 </span>
@@ -104,12 +107,89 @@ function Credentials() {
                   {certificate.year}
                 </span>
               </div>
-            </a>
+            </button>
           ))}
 
         </div>
+        </div>
+
+{activeCertificate !== null && (
+  <div
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-3 backdrop-blur-sm sm:p-6"
+    onClick={() => setActiveCertificate(null)}
+  >
+    <div
+      className="relative flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-[#F7F3EA] text-[#332E2A] shadow-2xl"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="flex items-center justify-between border-b border-[#332E2A]/10 px-5 py-4">
+        <div>
+          <h3 className="text-sm font-semibold sm:text-base">
+            {certificates[activeCertificate].title}
+          </h3>
+          <p className="mt-1 text-xs text-[#332E2A]/50">
+            {certificates[activeCertificate].subtitle} · {certificates[activeCertificate].year}
+          </p>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setActiveCertificate(null)}
+          className="ml-4 text-2xl text-[#332E2A]/50 hover:text-[#332E2A]"
+          aria-label="Close certificate"
+        >
+          ×
+        </button>
       </div>
-    </section>
+
+      <div className="min-h-0 flex-1 bg-[#332E2A]">
+        <iframe
+          key={certificates[activeCertificate].file}
+          src={certificates[activeCertificate].file}
+          title={certificates[activeCertificate].title}
+          className="h-full w-full"
+        />
+      </div>
+
+      <div className="flex items-center justify-between border-t border-[#332E2A]/10 px-5 py-3">
+        <span className="text-xs text-[#332E2A]/50">
+          {activeCertificate + 1} / {certificates.length}
+        </span>
+
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={() =>
+              setActiveCertificate(
+                (activeCertificate - 1 + certificates.length) %
+                  certificates.length
+              )
+            }
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#332E2A]/20 hover:bg-[#332E2A] hover:text-white"
+            aria-label="Previous certificate"
+          >
+            ←
+          </button>
+
+          <button
+            type="button"
+            onClick={() =>
+              setActiveCertificate(
+                (activeCertificate + 1) % certificates.length
+              )
+            }
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#332E2A]/20 hover:bg-[#332E2A] hover:text-white"
+            aria-label="Next certificate"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+</section>
   );
 }
 
